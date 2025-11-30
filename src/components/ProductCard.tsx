@@ -119,65 +119,51 @@ export const ProductCard = ({ product, inCart, onAdd, onUpdateQuantity, index }:
                     <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
                         <div
                             className={`h-full rounded-full transition-all duration-500 ${isOutOfStock ? 'bg-slate-300 w-0' :
-                                isLowStock ? 'bg-orange-500' : 'bg-gradient-primary'
+                                    isLowStock ? 'bg-orange-500' : 'bg-gradient-primary'
                                 }`}
                             style={{ width: `${isOutOfStock ? 0 : Math.max(5, stockPercentage)}%` }}
                         />
                     </div>
                 </div>
 
-                {/* Add to cart / Quantity controls */}
-                {inCart ? (
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="flex items-center justify-between bg-gradient-to-r from-emerald-50 to-teal-50 rounded-xl p-1.5 border border-emerald-200"
-                    >
-                        <button
-                            onClick={() => onUpdateQuantity(product.id, -1)}
-                            className="w-9 h-9 flex items-center justify-center bg-white rounded-lg shadow-sm text-slate-600 hover:text-red-600 hover:bg-red-50 hover:shadow-md transition-all active:scale-95"
-                        >
-                            <Minus className="w-4 h-4" />
-                        </button>
-                        <div className="flex flex-col items-center px-2">
-                            <span className="font-bold text-slate-900 text-lg">{inCart.quantity}</span>
-                            <span className="text-xs text-slate-500">{product.unit}</span>
-                        </div>
-                        <button
-                            onClick={() => {
-                                if (inCart.quantity < product.stock) {
-                                    onUpdateQuantity(product.id, 1);
-                                }
-                            }}
-                            disabled={inCart.quantity >= product.stock}
-                            className={`w-9 h-9 flex items-center justify-center bg-white rounded-lg shadow-sm transition-all active:scale-95 ${inCart.quantity >= product.stock
-                                ? 'text-slate-300 cursor-not-allowed'
-                                : 'text-slate-600 hover:text-emerald-600 hover:bg-emerald-50 hover:shadow-md'
-                                }`}
-                        >
-                            <Plus className="w-4 h-4" />
-                        </button>
-                    </motion.div>
-                ) : (
-                    <motion.button
-                        onClick={() => onAdd(product)}
-                        disabled={isOutOfStock}
-                        whileTap={!isOutOfStock ? { scale: 0.97 } : {}}
-                        className={`w-full py-3 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 group/btn ${isOutOfStock
-                            ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                            : 'bg-gradient-primary text-white hover:shadow-colored'
+                {/* Quantity controls (Always visible) */}
+                <div className="flex items-center justify-between bg-white rounded-xl p-1 border border-slate-200 shadow-sm">
+                    <button
+                        onClick={() => inCart && onUpdateQuantity(product.id, -1)}
+                        disabled={!inCart || isOutOfStock}
+                        className={`w-10 h-10 flex items-center justify-center rounded-lg transition-all active:scale-95 ${!inCart || isOutOfStock
+                                ? 'text-slate-300 cursor-not-allowed bg-slate-50'
+                                : 'text-slate-600 hover:text-red-600 hover:bg-red-50 hover:shadow-sm'
                             }`}
                     >
-                        {isOutOfStock ? (
-                            'No disponible'
-                        ) : (
-                            <>
-                                <Plus className="w-5 h-5 group-hover/btn:rotate-90 transition-transform" />
-                                Agregar
-                            </>
-                        )}
-                    </motion.button>
-                )}
+                        <Minus className="w-5 h-5" />
+                    </button>
+
+                    <div className="flex flex-col items-center px-2 min-w-[3rem]">
+                        <span className={`font-bold text-lg ${inCart ? 'text-slate-900' : 'text-slate-400'}`}>
+                            {inCart ? inCart.quantity : 0}
+                        </span>
+                        <span className="text-[10px] text-slate-500 uppercase font-medium">{product.unit}</span>
+                    </div>
+
+                    <button
+                        onClick={() => {
+                            if (isOutOfStock) return;
+                            if (!inCart) {
+                                onAdd(product);
+                            } else if (inCart.quantity < product.stock) {
+                                onUpdateQuantity(product.id, 1);
+                            }
+                        }}
+                        disabled={isOutOfStock || (inCart && inCart.quantity >= product.stock)}
+                        className={`w-10 h-10 flex items-center justify-center rounded-lg transition-all active:scale-95 ${isOutOfStock || (inCart && inCart.quantity >= product.stock)
+                                ? 'text-slate-300 cursor-not-allowed bg-slate-50'
+                                : 'bg-gradient-primary text-white hover:shadow-colored shadow-sm'
+                            }`}
+                    >
+                        <Plus className="w-5 h-5" />
+                    </button>
+                </div>
             </div>
 
             {/* Decorative corner gradient */}
