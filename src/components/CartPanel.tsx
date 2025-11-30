@@ -221,16 +221,18 @@ export const CartPanel = ({
                                 </label>
 
                                 {/* Submit Button */}
-                                <motion.button
+                                {/* Submit Button */}
+                                <button
                                     onClick={onSubmit}
                                     disabled={!termsAccepted || isSubmitting}
-                                    whileHover={{ scale: termsAccepted ? 1.02 : 1 }}
-                                    whileTap={{ scale: termsAccepted ? 0.98 : 1 }}
-                                    className="w-full py-4 bg-gradient-primary text-white rounded-xl font-bold text-lg hover:shadow-colored-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none transition-all flex items-center justify-center gap-3 relative overflow-hidden group/submit"
+                                    className={`w-full py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3 relative overflow-hidden group/submit ${!termsAccepted || isSubmitting
+                                            ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                                            : 'bg-gradient-primary text-white hover:shadow-colored hover:scale-[1.02] active:scale-[0.98]'
+                                        }`}
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                            <div className="w-5 h-5 border-2 border-slate-400 border-t-slate-600 rounded-full animate-spin" />
                                             <span className="font-medium">Procesando...</span>
                                         </>
                                     ) : (
@@ -239,7 +241,7 @@ export const CartPanel = ({
                                             <ArrowRight className="w-5 h-5 group-hover/submit:translate-x-1 transition-transform" />
                                         </>
                                     )}
-                                </motion.button>
+                                </button>
                             </div>
                         )}
                     </motion.div>

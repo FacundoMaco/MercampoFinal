@@ -108,18 +108,13 @@ export const SuccessModal = ({ orderId, onClose }: SuccessModalProps) => {
                     </motion.div>
 
                     {/* Close button */}
-                    <motion.button
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6 }}
+                    <button
                         onClick={onClose}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className="w-full py-4 bg-gradient-primary text-white rounded-xl font-semibold hover:shadow-colored transition-all flex items-center justify-center gap-2"
+                        className="w-full py-4 bg-gradient-primary text-white rounded-xl font-semibold hover:shadow-colored transition-all flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-[0.98]"
                     >
                         <ShoppingBag className="w-5 h-5" />
                         Continuar Comprando
-                    </motion.button>
+                    </button>
                 </div>
             </motion.div>
         </div>
