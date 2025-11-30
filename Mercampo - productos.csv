@@ -1,0 +1,91 @@
+ProductoID,ProductoNombre,Presentación,Unidad
+TUB-001,Papa Amarilla,Entera / Tierra,Kg
+TUB-002,Papa Amarilla Coctel,Entera / Tierra,Kg
+TUB-003,Papa Amarilla Tumbay,Entera / Tierra,Kg
+TUB-004,Papa Canchan,Entera / Tierra,Kg
+TUB-005,Papa Huamantanga,Entera / Tierra,Kg
+TUB-006,Papa Huayro,Entera / Tierra,Kg
+TUB-007,Papa Nativa (Morada/Rosada),Entera / Tierra,Kg
+TUB-008,Papa Yungay,Entera / Tierra,Kg
+TUB-009,Camote Amarillo,Entero,Kg
+TUB-010,Camote Morado,Entero,Kg
+TUB-011,Yuca,Entera / Tierra,Kg
+TUB-012,Yuca Pelada,Procesada / Pelada,Kg
+TUB-013,Olluco Entero,Entero,Kg
+TUB-014,Olluco Picado,Procesado / Picado,Kg
+VER-001,Zanahoria,Entera,Kg
+VER-002,Cebolla Roja,Entera,Kg
+VER-003,Cebolla Blanca,Entera,Kg
+VER-004,Tomate,Entero,Kg
+VER-005,Limón,Entero,Kg
+VER-006,Limón Tahití,Entero,Kg
+VER-007,Ajos Entero,Bulbo entero,Kg
+VER-008,Ajos Pelados,Dientes pelados,Kg
+VER-009,Ají Amarillo,Entero,Kg
+VER-010,Ají Limo Rojo,Entero,Kg
+VER-011,Ají Panca,Entero / Seco,Kg
+VER-012,Rocoto,Entero,Kg
+VER-013,Zapallo Macre,Trozado,Kg
+VER-014,Arverja Pelada,Desgranada,Kg
+VER-015,Haba Verde Pelada,Desgranada,Kg
+TUB-001,Papa Amarilla,Entera / Tierra,Kg
+TUB-002,Papa Amarilla Coctel,Entera / Tierra,Kg
+TUB-003,Papa Amarilla Tumbay,Entera / Tierra,Kg
+TUB-004,Papa Canchan,Entera / Tierra,Kg
+TUB-005,Papa Huamantanga,Entera / Tierra,Kg
+TUB-006,Papa Huayro,Entera / Tierra,Kg
+TUB-007,Papa Nativa (Morada/Rosada),Entera / Tierra,Kg
+TUB-008,Papa Yungay,Entera / Tierra,Kg
+TUB-009,Camote Amarillo,Entero,Kg
+TUB-010,Camote Morado,Entero,Kg
+TUB-011,Yuca,Entera / Tierra,Kg
+TUB-012,Yuca Pelada,Procesada / Pelada,Kg
+TUB-013,Olluco Entero,Entero,Kg
+TUB-014,Olluco Picado,Procesado / Picado,Kg
+VER-001,Zanahoria,Entera,Kg
+VER-002,Cebolla Roja,Entera,Kg
+VER-003,Cebolla Blanca,Entera,Kg
+VER-004,Tomate,Entero,Kg
+VER-005,Limón,Entero,Kg
+VER-006,Limón Tahití,Entero,Kg
+VER-007,Ajos Entero,Bulbo entero,Kg
+VER-008,Ajos Pelados,Dientes pelados,Kg
+VER-009,Ají Amarillo,Entero,Kg
+VER-010,Ají Limo Rojo,Entero,Kg
+VER-011,Ají Panca,Entero / Seco,Kg
+VER-012,Rocoto,Entero,Kg
+VER-013,Zapallo Macre,Trozado,Kg
+VER-014,Arverja Pelada,Desgranada,Kg
+VER-015,Haba Verde Pelada,Desgranada,Kg
+UND-001,Lechuga Americana,Pieza Entera,Und (Min. 300g)
+UND-002,Lechuga Seda/Romana,Pieza Entera,Und (Min. 250g)
+UND-003,Lechuga Orgánica/Morada,Pieza Entera,Und (Min. 200g)
+UND-004,Col (Corazón/Morada),Pieza Entera,Und (Min. 1.5 Kg)
+UND-005,Brócoli,Pieza Entera,Und (Min. 400g)
+UND-006,Coliflor,Pieza Entera,Und (Min. 600g)
+UND-007,Apio,Tallo Completo,Und (Min. 800g)
+UND-008,Poro,Tallo Completo,Und (Min. 300g)
+UND-009,Zapallo Italiano,Pieza Entera,Und (Min. 300g)
+UND-010,Pepino (Normal/Japonés),Pieza Entera,Und (Min. 250g)
+UND-011,Pimiento (Todos colores),Pieza Entera,Und (Min. 200g)
+UND-012,Palta (Fuerte/Hass),Pieza Entera,Und (Min. 250g)
+UND-013,Alcachofa,Pieza Entera,Und (Min. 300g)
+UND-014,Maíz Morado / Choclo,Pieza Entera,Und (Min. 350g)
+HIE-001,Culantro,Atado Estándar,Atado (250g)
+HIE-002,Perejil Criollo,Atado Estándar,Atado (250g)
+HIE-003,Albahaca,Atado Estándar,Atado (250g)
+HIE-004,Huacatay,Atado Estándar,Atado (250g)
+HIE-005,Hierba Buena,Atado Estándar,Atado (250g)
+HIE-006,Hierba Luisa,Atado Estándar,Atado (250g)
+HIE-007,Menta,Atado Estándar,Atado (250g)
+HIE-008,Orégano Verde,Atado Estándar,Atado (250g)
+HIE-009,Romero,Atado Estándar,Atado (250g)
+HIE-010,Muña,Atado Estándar,Atado (250g)
+HIE-011,Cebolla China,Atado Estándar,Atado (250g)
+GOU-001,Brotes (Alfalfa/Beterraga/Rabanito),Clamshell (Caja plástica),100 g
+GOU-002,Mix de Lechugas / Micromix,Bolsa Procesada,250 g
+GOU-003,Champiñones / Portobello,Bandeja,200 g
+GOU-004,Flores Comestibles,Bandeja Pequeña,50 g
+GOU-005,Arugula / Berros,Bandeja / Atado Fino,150 g
+GOU-006,Huevo de Codorniz,Paquete,250 g (aprox 24 und)
+GOU-007,Espárragos,Atado Exportación,500 g
