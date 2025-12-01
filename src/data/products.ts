@@ -1,553 +1,514 @@
 import type { Product } from '../types';
 
 export const products: Product[] = [
+  // Verduras
   {
-    "id": "UND-001",
+    "id": "VER-001",
     "name": "Lechuga Americana",
-    "category": "General",
-    "price": 16.68,
-    "unit": "Und (Min. 300g)",
+    "category": "Verduras",
+    "price": 3.50,
+    "unit": "Und",
     "image": "",
     "stock": 82
   },
   {
-    "id": "UND-002",
-    "name": "Lechuga Seda/Romana",
-    "category": "General",
-    "price": 15.4,
-    "unit": "Und (Min. 250g)",
+    "id": "VER-002",
+    "name": "Lechuga Seda",
+    "category": "Verduras",
+    "price": 2.50,
+    "unit": "Und",
     "image": "",
-    "stock": 459
+    "stock": 120
   },
   {
-    "id": "UND-003",
-    "name": "Lechuga Orgánica/Morada",
-    "category": "General",
-    "price": 10.8,
-    "unit": "Und (Min. 200g)",
+    "id": "VER-003",
+    "name": "Tomate Italiano",
+    "category": "Verduras",
+    "price": 4.20,
+    "unit": "Kg",
     "image": "",
-    "stock": 252
+    "stock": 350
   },
   {
-    "id": "UND-004",
-    "name": "Col (Corazón/Morada)",
-    "category": "General",
-    "price": 5.81,
-    "unit": "Und (Min. 1.5 Kg)",
+    "id": "VER-004",
+    "name": "Zanahoria",
+    "category": "Verduras",
+    "price": 2.80,
+    "unit": "Kg",
     "image": "",
-    "stock": 230
+    "stock": 200
   },
   {
-    "id": "UND-005",
+    "id": "VER-005",
     "name": "Brócoli",
-    "category": "General",
-    "price": 17.43,
-    "unit": "Und (Min. 400g)",
+    "category": "Verduras",
+    "price": 5.50,
+    "unit": "Und",
     "image": "",
-    "stock": 377
+    "stock": 90
   },
   {
-    "id": "UND-006",
-    "name": "Coliflor",
-    "category": "General",
-    "price": 2.5,
-    "unit": "Und (Min. 600g)",
+    "id": "VER-006",
+    "name": "Espinaca",
+    "category": "Verduras",
+    "price": 3.00,
+    "unit": "Atado",
     "image": "",
-    "stock": 392
+    "stock": 150
   },
   {
-    "id": "UND-007",
+    "id": "VER-007",
     "name": "Apio",
-    "category": "General",
-    "price": 17.51,
-    "unit": "Und (Min. 800g)",
+    "category": "Verduras",
+    "price": 3.50,
+    "unit": "Atado",
     "image": "",
-    "stock": 243
+    "stock": 80
   },
   {
-    "id": "UND-008",
-    "name": "Poro",
-    "category": "General",
-    "price": 17.88,
-    "unit": "Und (Min. 300g)",
+    "id": "VER-008",
+    "name": "Pimiento Rojo",
+    "category": "Verduras",
+    "price": 6.00,
+    "unit": "Kg",
     "image": "",
-    "stock": 246
+    "stock": 110
   },
   {
-    "id": "UND-009",
-    "name": "Zapallo Italiano",
-    "category": "General",
-    "price": 6.99,
-    "unit": "Und (Min. 300g)",
+    "id": "VER-009",
+    "name": "Cebolla Roja",
+    "category": "Verduras",
+    "price": 3.20,
+    "unit": "Kg",
     "image": "",
-    "stock": 371
+    "stock": 300
   },
   {
-    "id": "UND-010",
-    "name": "Pepino (Normal/Japonés)",
-    "category": "General",
-    "price": 8.42,
-    "unit": "Und (Min. 250g)",
+    "id": "VER-010",
+    "name": "Ajo Entero",
+    "category": "Verduras",
+    "price": 12.00,
+    "unit": "Kg",
     "image": "",
-    "stock": 133
+    "stock": 60
   },
   {
-    "id": "UND-011",
-    "name": "Pimiento (Todos colores)",
-    "category": "General",
-    "price": 18.44,
-    "unit": "Und (Min. 200g)",
+    "id": "VER-011",
+    "name": "Zapallo Macre",
+    "category": "Verduras",
+    "price": 3.00,
+    "unit": "Kg",
     "image": "",
-    "stock": 63
+    "stock": 95
   },
   {
-    "id": "UND-012",
-    "name": "Palta (Fuerte/Hass)",
-    "category": "General",
-    "price": 17.37,
-    "unit": "Und (Min. 250g)",
+    "id": "VER-012",
+    "name": "Pepino",
+    "category": "Verduras",
+    "price": 2.00,
+    "unit": "Und",
     "image": "",
-    "stock": 151
+    "stock": 130
   },
   {
-    "id": "UND-013",
-    "name": "Alcachofa",
-    "category": "General",
-    "price": 8.3,
-    "unit": "Und (Min. 300g)",
+    "id": "VER-013",
+    "name": "Vainita",
+    "category": "Verduras",
+    "price": 5.80,
+    "unit": "Kg",
     "image": "",
-    "stock": 276
+    "stock": 75
   },
   {
-    "id": "UND-014",
-    "name": "Maíz Morado / Choclo",
-    "category": "General",
-    "price": 21.6,
-    "unit": "Und (Min. 350g)",
+    "id": "VER-014",
+    "name": "Limón Sutil",
+    "category": "Verduras",
+    "price": 6.50,
+    "unit": "Kg",
     "image": "",
-    "stock": 363
+    "stock": 220
   },
+
+  // Tubérculos
   {
     "id": "TUB-001",
     "name": "Papa Amarilla",
     "category": "Tubérculos",
-    "price": 9.15,
+    "price": 5.50,
     "unit": "Kg",
     "image": "",
     "stock": 157
   },
   {
     "id": "TUB-002",
-    "name": "Papa Amarilla Coctel",
+    "name": "Papa Canchán",
     "category": "Tubérculos",
-    "price": 17.75,
-    "unit": "Kg",
-    "image": "",
-    "stock": 154
-  },
-  {
-    "id": "TUB-003",
-    "name": "Papa Amarilla Tumbay",
-    "category": "Tubérculos",
-    "price": 19.58,
-    "unit": "Kg",
-    "image": "",
-    "stock": 84
-  },
-  {
-    "id": "TUB-004",
-    "name": "Papa Canchan",
-    "category": "Tubérculos",
-    "price": 5.91,
+    "price": 3.20,
     "unit": "Kg",
     "image": "",
     "stock": 398
   },
   {
-    "id": "TUB-005",
+    "id": "TUB-003",
     "name": "Papa Huamantanga",
     "category": "Tubérculos",
-    "price": 16.97,
-    "unit": "Kg",
-    "image": "",
-    "stock": 482
-  },
-  {
-    "id": "TUB-006",
-    "name": "Papa Huayro",
-    "category": "Tubérculos",
-    "price": 15.23,
+    "price": 4.80,
     "unit": "Kg",
     "image": "",
     "stock": 216
   },
   {
-    "id": "TUB-007",
-    "name": "Papa Nativa (Morada/Rosada)",
-    "category": "Tubérculos",
-    "price": 21.24,
-    "unit": "Kg",
-    "image": "",
-    "stock": 184
-  },
-  {
-    "id": "TUB-008",
-    "name": "Papa Yungay",
-    "category": "Tubérculos",
-    "price": 3.63,
-    "unit": "Kg",
-    "image": "",
-    "stock": 259
-  },
-  {
-    "id": "TUB-009",
+    "id": "TUB-004",
     "name": "Camote Amarillo",
     "category": "Tubérculos",
-    "price": 7.88,
+    "price": 3.50,
     "unit": "Kg",
     "image": "",
-    "stock": 7
+    "stock": 180
   },
   {
-    "id": "TUB-010",
-    "name": "Camote Morado",
-    "category": "Tubérculos",
-    "price": 19.73,
-    "unit": "Kg",
-    "image": "",
-    "stock": 15
-  },
-  {
-    "id": "TUB-011",
+    "id": "TUB-005",
     "name": "Yuca",
     "category": "Tubérculos",
-    "price": 15.61,
+    "price": 4.00,
     "unit": "Kg",
     "image": "",
     "stock": 198
   },
   {
-    "id": "TUB-012",
-    "name": "Yuca Pelada",
+    "id": "TUB-006",
+    "name": "Olluco",
     "category": "Tubérculos",
-    "price": 3.4,
-    "unit": "Kg",
-    "image": "",
-    "stock": 251
-  },
-  {
-    "id": "TUB-013",
-    "name": "Olluco Entero",
-    "category": "Tubérculos",
-    "price": 17.84,
+    "price": 6.50,
     "unit": "Kg",
     "image": "",
     "stock": 76
   },
+
+  // Frutas
   {
-    "id": "TUB-014",
-    "name": "Olluco Picado",
-    "category": "Tubérculos",
-    "price": 7.96,
+    "id": "FRU-001",
+    "name": "Manzana Israel",
+    "category": "Frutas",
+    "price": 4.50,
     "unit": "Kg",
-    "image": "",
-    "stock": 212
-  },
-  {
-    "id": "VER-001",
-    "name": "Zanahoria",
-    "category": "Verduras",
-    "price": 7.26,
-    "unit": "Kg",
-    "image": "",
-    "stock": 425
-  },
-  {
-    "id": "VER-002",
-    "name": "Cebolla Roja",
-    "category": "Verduras",
-    "price": 21.2,
-    "unit": "Kg",
-    "image": "",
-    "stock": 209
-  },
-  {
-    "id": "VER-003",
-    "name": "Cebolla Blanca",
-    "category": "Verduras",
-    "price": 21.71,
-    "unit": "Kg",
-    "image": "",
-    "stock": 330
-  },
-  {
-    "id": "VER-004",
-    "name": "Tomate",
-    "category": "Verduras",
-    "price": 20.54,
-    "unit": "Kg",
-    "image": "",
-    "stock": 354
-  },
-  {
-    "id": "VER-005",
-    "name": "Limón",
-    "category": "Verduras",
-    "price": 12.2,
-    "unit": "Kg",
-    "image": "",
-    "stock": 82
-  },
-  {
-    "id": "VER-006",
-    "name": "Limón Tahití",
-    "category": "Verduras",
-    "price": 14.69,
-    "unit": "Kg",
-    "image": "",
-    "stock": 284
-  },
-  {
-    "id": "VER-007",
-    "name": "Ajos Entero",
-    "category": "Verduras",
-    "price": 8.38,
-    "unit": "Kg",
-    "image": "",
-    "stock": 148
-  },
-  {
-    "id": "VER-008",
-    "name": "Ajos Pelados",
-    "category": "Verduras",
-    "price": 3.13,
-    "unit": "Kg",
-    "image": "",
-    "stock": 392
-  },
-  {
-    "id": "VER-009",
-    "name": "Ají Amarillo",
-    "category": "Verduras",
-    "price": 14.72,
-    "unit": "Kg",
-    "image": "",
-    "stock": 74
-  },
-  {
-    "id": "VER-010",
-    "name": "Ají Limo Rojo",
-    "category": "Verduras",
-    "price": 19.04,
-    "unit": "Kg",
-    "image": "",
-    "stock": 63
-  },
-  {
-    "id": "VER-011",
-    "name": "Ají Panca",
-    "category": "Verduras",
-    "price": 17.74,
-    "unit": "Kg",
-    "image": "",
-    "stock": 157
-  },
-  {
-    "id": "VER-012",
-    "name": "Rocoto",
-    "category": "Verduras",
-    "price": 13.06,
-    "unit": "Kg",
-    "image": "",
-    "stock": 4
-  },
-  {
-    "id": "VER-013",
-    "name": "Zapallo Macre",
-    "category": "Verduras",
-    "price": 8.62,
-    "unit": "Kg",
-    "image": "",
-    "stock": 151
-  },
-  {
-    "id": "VER-014",
-    "name": "Arverja Pelada",
-    "category": "Verduras",
-    "price": 11.24,
-    "unit": "Kg",
-    "image": "",
-    "stock": 287
-  },
-  {
-    "id": "VER-015",
-    "name": "Haba Verde Pelada",
-    "category": "Verduras",
-    "price": 13.46,
-    "unit": "Kg",
-    "image": "",
-    "stock": 182
-  },
-  {
-    "id": "HIE-001",
-    "name": "Culantro",
-    "category": "General",
-    "price": 7.31,
-    "unit": "Atado (250g)",
-    "image": "",
-    "stock": 9
-  },
-  {
-    "id": "HIE-002",
-    "name": "Perejil Criollo",
-    "category": "General",
-    "price": 10.05,
-    "unit": "Atado (250g)",
     "image": "",
     "stock": 150
   },
   {
+    "id": "FRU-002",
+    "name": "Plátano de Seda",
+    "category": "Frutas",
+    "price": 3.80,
+    "unit": "Mano",
+    "image": "",
+    "stock": 200
+  },
+  {
+    "id": "FRU-003",
+    "name": "Mandarina",
+    "category": "Frutas",
+    "price": 4.00,
+    "unit": "Kg",
+    "image": "",
+    "stock": 180
+  },
+  {
+    "id": "FRU-004",
+    "name": "Papaya",
+    "category": "Frutas",
+    "price": 5.00,
+    "unit": "Und",
+    "image": "",
+    "stock": 60
+  },
+  {
+    "id": "FRU-005",
+    "name": "Piña Golden",
+    "category": "Frutas",
+    "price": 6.50,
+    "unit": "Und",
+    "image": "",
+    "stock": 85
+  },
+  {
+    "id": "FRU-006",
+    "name": "Fresa",
+    "category": "Frutas",
+    "price": 8.00,
+    "unit": "Kg",
+    "image": "",
+    "stock": 90
+  },
+  {
+    "id": "FRU-007",
+    "name": "Uva Verde",
+    "category": "Frutas",
+    "price": 7.50,
+    "unit": "Kg",
+    "image": "",
+    "stock": 110
+  },
+  {
+    "id": "FRU-008",
+    "name": "Mango Edward",
+    "category": "Frutas",
+    "price": 6.00,
+    "unit": "Kg",
+    "image": "",
+    "stock": 70
+  },
+  {
+    "id": "FRU-009",
+    "name": "Naranja de Jugo",
+    "category": "Frutas",
+    "price": 3.00,
+    "unit": "Kg",
+    "image": "",
+    "stock": 250
+  },
+  {
+    "id": "FRU-010",
+    "name": "Palta Hass",
+    "category": "Frutas",
+    "price": 9.50,
+    "unit": "Kg",
+    "image": "",
+    "stock": 130
+  },
+
+  // Carnes y Aves
+  {
+    "id": "CAR-001",
+    "name": "Pollo Entero",
+    "category": "Carnes",
+    "price": 9.80,
+    "unit": "Kg",
+    "image": "",
+    "stock": 50
+  },
+  {
+    "id": "CAR-002",
+    "name": "Pechuga de Pollo",
+    "category": "Carnes",
+    "price": 16.50,
+    "unit": "Kg",
+    "image": "",
+    "stock": 80
+  },
+  {
+    "id": "CAR-003",
+    "name": "Carne Molida de Res",
+    "category": "Carnes",
+    "price": 22.00,
+    "unit": "Kg",
+    "image": "",
+    "stock": 40
+  },
+  {
+    "id": "CAR-004",
+    "name": "Bistec de Res",
+    "category": "Carnes",
+    "price": 28.50,
+    "unit": "Kg",
+    "image": "",
+    "stock": 35
+  },
+  {
+    "id": "CAR-005",
+    "name": "Chuleta de Cerdo",
+    "category": "Carnes",
+    "price": 18.00,
+    "unit": "Kg",
+    "image": "",
+    "stock": 45
+  },
+
+  // Lácteos y Huevos
+  {
+    "id": "LAC-001",
+    "name": "Huevos Pardos",
+    "category": "Lácteos",
+    "price": 18.00,
+    "unit": "Jaba 30 Und",
+    "image": "",
+    "stock": 100
+  },
+  {
+    "id": "LAC-002",
+    "name": "Leche Fresca",
+    "category": "Lácteos",
+    "price": 5.50,
+    "unit": "Litro",
+    "image": "",
+    "stock": 60
+  },
+  {
+    "id": "LAC-003",
+    "name": "Queso Fresco",
+    "category": "Lácteos",
+    "price": 24.00,
+    "unit": "Kg",
+    "image": "",
+    "stock": 30
+  },
+  {
+    "id": "LAC-004",
+    "name": "Mantequilla con Sal",
+    "category": "Lácteos",
+    "price": 12.50,
+    "unit": "Barra 200g",
+    "image": "",
+    "stock": 50
+  },
+  {
+    "id": "LAC-005",
+    "name": "Yogurt Natural",
+    "category": "Lácteos",
+    "price": 8.50,
+    "unit": "Litro",
+    "image": "",
+    "stock": 40
+  },
+
+  // Abarrotes
+  {
+    "id": "ABA-001",
+    "name": "Arroz Superior",
+    "category": "Abarrotes",
+    "price": 4.20,
+    "unit": "Kg",
+    "image": "",
+    "stock": 300
+  },
+  {
+    "id": "ABA-002",
+    "name": "Azúcar Rubia",
+    "category": "Abarrotes",
+    "price": 3.80,
+    "unit": "Kg",
+    "image": "",
+    "stock": 250
+  },
+  {
+    "id": "ABA-003",
+    "name": "Aceite Vegetal",
+    "category": "Abarrotes",
+    "price": 11.50,
+    "unit": "Litro",
+    "image": "",
+    "stock": 150
+  },
+  {
+    "id": "ABA-004",
+    "name": "Fideos Tallarín",
+    "category": "Abarrotes",
+    "price": 3.50,
+    "unit": "500g",
+    "image": "",
+    "stock": 200
+  },
+  {
+    "id": "ABA-005",
+    "name": "Menestra Lentejas",
+    "category": "Abarrotes",
+    "price": 6.00,
+    "unit": "500g",
+    "image": "",
+    "stock": 120
+  },
+  {
+    "id": "ABA-006",
+    "name": "Avena",
+    "category": "Abarrotes",
+    "price": 4.50,
+    "unit": "300g",
+    "image": "",
+    "stock": 100
+  },
+  {
+    "id": "ABA-007",
+    "name": "Café Molido",
+    "category": "Abarrotes",
+    "price": 18.00,
+    "unit": "250g",
+    "image": "",
+    "stock": 60
+  },
+
+  // Bebidas
+  {
+    "id": "BEB-001",
+    "name": "Agua Mineral sin Gas",
+    "category": "Bebidas",
+    "price": 2.50,
+    "unit": "1L",
+    "image": "",
+    "stock": 200
+  },
+  {
+    "id": "BEB-002",
+    "name": "Gaseosa Cola",
+    "category": "Bebidas",
+    "price": 8.50,
+    "unit": "3L",
+    "image": "",
+    "stock": 150
+  },
+  {
+    "id": "BEB-003",
+    "name": "Jugo de Naranja",
+    "category": "Bebidas",
+    "price": 6.00,
+    "unit": "1L",
+    "image": "",
+    "stock": 80
+  },
+
+  // Hierbas
+  {
+    "id": "HIE-001",
+    "name": "Culantro",
+    "category": "Hierbas",
+    "price": 1.50,
+    "unit": "Atado",
+    "image": "",
+    "stock": 50
+  },
+  {
+    "id": "HIE-002",
+    "name": "Perejil",
+    "category": "Hierbas",
+    "price": 1.50,
+    "unit": "Atado",
+    "image": "",
+    "stock": 45
+  },
+  {
     "id": "HIE-003",
     "name": "Albahaca",
-    "category": "General",
-    "price": 11.9,
-    "unit": "Atado (250g)",
+    "category": "Hierbas",
+    "price": 2.50,
+    "unit": "Atado",
     "image": "",
-    "stock": 236
+    "stock": 30
   },
   {
     "id": "HIE-004",
-    "name": "Huacatay",
-    "category": "General",
-    "price": 4.38,
-    "unit": "Atado (250g)",
+    "name": "Hierba Luisa",
+    "category": "Hierbas",
+    "price": 3.00,
+    "unit": "Atado",
     "image": "",
-    "stock": 288
+    "stock": 40
   },
   {
     "id": "HIE-005",
-    "name": "Hierba Buena",
-    "category": "General",
-    "price": 12.9,
-    "unit": "Atado (250g)",
+    "name": "Orégano Seco",
+    "category": "Hierbas",
+    "price": 2.00,
+    "unit": "Paquete",
     "image": "",
-    "stock": 176
-  },
-  {
-    "id": "HIE-006",
-    "name": "Hierba Luisa",
-    "category": "General",
-    "price": 14.14,
-    "unit": "Atado (250g)",
-    "image": "",
-    "stock": 302
-  },
-  {
-    "id": "HIE-007",
-    "name": "Menta",
-    "category": "General",
-    "price": 8.72,
-    "unit": "Atado (250g)",
-    "image": "",
-    "stock": 13
-  },
-  {
-    "id": "HIE-008",
-    "name": "Orégano Verde",
-    "category": "General",
-    "price": 9.57,
-    "unit": "Atado (250g)",
-    "image": "",
-    "stock": 457
-  },
-  {
-    "id": "HIE-009",
-    "name": "Romero",
-    "category": "General",
-    "price": 21.44,
-    "unit": "Atado (250g)",
-    "image": "",
-    "stock": 391
-  },
-  {
-    "id": "HIE-010",
-    "name": "Muña",
-    "category": "General",
-    "price": 17.76,
-    "unit": "Atado (250g)",
-    "image": "",
-    "stock": 489
-  },
-  {
-    "id": "HIE-011",
-    "name": "Cebolla China",
-    "category": "General",
-    "price": 15.41,
-    "unit": "Atado (250g)",
-    "image": "",
-    "stock": 299
-  },
-  {
-    "id": "GOU-001",
-    "name": "Brotes (Alfalfa/Beterraga/Rabanito)",
-    "category": "General",
-    "price": 3.68,
-    "unit": "100 g",
-    "image": "",
-    "stock": 429
-  },
-  {
-    "id": "GOU-002",
-    "name": "Mix de Lechugas / Micromix",
-    "category": "General",
-    "price": 10.89,
-    "unit": "250 g",
-    "image": "",
-    "stock": 402
-  },
-  {
-    "id": "GOU-003",
-    "name": "Champiñones / Portobello",
-    "category": "General",
-    "price": 3.51,
-    "unit": "200 g",
-    "image": "",
-    "stock": 338
-  },
-  {
-    "id": "GOU-004",
-    "name": "Flores Comestibles",
-    "category": "General",
-    "price": 4.21,
-    "unit": "50 g",
-    "image": "",
-    "stock": 323
-  },
-  {
-    "id": "GOU-005",
-    "name": "Arugula / Berros",
-    "category": "General",
-    "price": 6.05,
-    "unit": "150 g",
-    "image": "",
-    "stock": 471
-  },
-  {
-    "id": "GOU-006",
-    "name": "Huevo de Codorniz",
-    "category": "General",
-    "price": 8.85,
-    "unit": "250 g (aprox 24 und)",
-    "image": "",
-    "stock": 268
-  },
-  {
-    "id": "GOU-007",
-    "name": "Espárragos",
-    "category": "General",
-    "price": 21.2,
-    "unit": "500 g",
-    "image": "",
-    "stock": 305
+    "stock": 100
   }
 ];

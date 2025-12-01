@@ -100,9 +100,12 @@ export const ImagePlaceholder = ({ className, category = 'Producto', productName
         // Fallback by category
         if (lowerCat.includes('fruta')) return '🍎';
         if (lowerCat.includes('verdura') || lowerCat.includes('vegetal')) return '🥬';
+        if (lowerCat.includes('tuberculo') || lowerCat.includes('tubérculo')) return '🥔';
+        if (lowerCat.includes('hierba')) return '🌿';
         if (lowerCat.includes('carne') || lowerCat.includes('pollo')) return '🥩';
         if (lowerCat.includes('lacteo') || lowerCat.includes('lácteo')) return '🥛';
         if (lowerCat.includes('pan') || lowerCat.includes('panaderia')) return '🍞';
+        if (lowerCat.includes('abarrote') || lowerCat.includes('despensa')) return '🥫';
         if (lowerCat.includes('bebida')) return '🥤';
         if (lowerCat.includes('limpieza')) return '🧹';
         if (lowerCat.includes('higiene')) return '🧼';
