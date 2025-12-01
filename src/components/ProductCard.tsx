@@ -1,8 +1,9 @@
+
+
 import { motion } from 'framer-motion';
-import { Plus, Minus, Star, Zap, AlertCircle } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import type { Product, OrderItem } from '../types';
 import { fadeInUp, cardHover } from '../utils/animations';
-import { CategoryIcon } from '../assets/illustrations';
 import { ImagePlaceholder } from './ImagePlaceholder';
 
 interface ProductCardProps {
@@ -19,39 +20,33 @@ export const ProductCard = ({ product, inCart, onAdd, onUpdateQuantity, index }:
     const isLowStock = product.stock < 20 && product.stock > 0;
     const isOutOfStock = product.stock === 0;
 
-    // Calculate percentage for progress bar (max 100 as baseline for visual)
-    const stockPercentage = Math.min(100, (product.stock / 100) * 100);
-
     return (
         <motion.div
             variants={fadeInUp}
             initial="rest"
             whileHover="hover"
             custom={index}
-            className={`group relative bg-white rounded-2xl border overflow-hidden transition-all duration-300 ${isOutOfStock ? 'opacity-75 border-slate-100' : 'border-slate-200 hover:border-emerald-300'}`}
+            className={`group relative bg-white rounded-2xl border overflow-hidden transition-all duration-300 ${isOutOfStock ? 'opacity-75 border-slate-100' : 'border-slate-200 hover:border-emerald-300 hover:shadow-lg'}`}
         >
-            {/* Badges */}
-            <div className="absolute top-3 left-3 z-10 flex flex-col gap-2">
+            {/* Badges - Minimalist */}
+            <div className="absolute top-2 left-2 z-10 flex flex-col gap-1">
                 {isNew && !isOutOfStock && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-gradient-accent text-white text-xs font-semibold rounded-lg shadow-lg">
-                        <Zap className="w-3 h-3" />
+                    <span className="inline-flex items-center px-2 py-0.5 bg-emerald-500 text-white text-[10px] font-bold uppercase tracking-wider rounded-md shadow-sm">
                         Nuevo
                     </span>
                 )}
                 {isFeatured && !isOutOfStock && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-purple-600 text-white text-xs font-semibold rounded-lg shadow-lg">
-                        <Star className="w-3 h-3" />
-                        Destacado
+                    <span className="inline-flex items-center px-2 py-0.5 bg-purple-500 text-white text-[10px] font-bold uppercase tracking-wider rounded-md shadow-sm">
+                        Top
                     </span>
                 )}
                 {isLowStock && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-orange-500 text-white text-xs font-semibold rounded-lg shadow-lg">
-                        <AlertCircle className="w-3 h-3" />
+                    <span className="inline-flex items-center px-2 py-0.5 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider rounded-md shadow-sm">
                         Poco Stock
                     </span>
                 )}
                 {isOutOfStock && (
-                    <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-slate-500 text-white text-xs font-semibold rounded-lg shadow-lg">
+                    <span className="inline-flex items-center px-2 py-0.5 bg-slate-500 text-white text-[10px] font-bold uppercase tracking-wider rounded-md shadow-sm">
                         Agotado
                     </span>
                 )}
@@ -70,7 +65,7 @@ export const ProductCard = ({ product, inCart, onAdd, onUpdateQuantity, index }:
                         className={`w-full h-full object-cover transition-transform duration-700 ${!isOutOfStock && 'group-hover:scale-110'} ${isOutOfStock && 'grayscale'}`}
                     />
                 ) : (
-                    <ImagePlaceholder category={product.category} className={isOutOfStock ? 'grayscale opacity-50' : ''} />
+                    <ImagePlaceholder category={product.category} productName={product.name} className={isOutOfStock ? 'grayscale opacity-50' : ''} />
                 )}
 
                 {/* Overlay on hover */}
@@ -85,65 +80,50 @@ export const ProductCard = ({ product, inCart, onAdd, onUpdateQuantity, index }:
                 )}
             </motion.div>
 
-            {/* Product Info */}
-            <div className="p-5 relative z-10">
-                {/* Category with icon */}
-                <div className="flex items-center gap-2 mb-2">
-                    <div className={isOutOfStock ? "text-slate-400" : "text-emerald-600"}>
-                        <CategoryIcon category={product.category} />
-                    </div>
-                    <span className="text-xs font-medium text-slate-500 uppercase tracking-wide">
+            {/* Product Info - Minimalist */}
+            <div className="p-4 relative z-10">
+                <div className="mb-2">
+                    <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-wider block mb-1">
                         {product.category}
                     </span>
+                    <h3 className="font-semibold text-slate-900 leading-tight line-clamp-2 min-h-[2.5rem]">
+                        {product.name}
+                    </h3>
                 </div>
 
-                <h3 className="font-semibold text-slate-900 mb-3 line-clamp-2 min-h-[3rem]">
-                    {product.name}
-                </h3>
-
-                {/* Price */}
-                <div className="flex items-baseline gap-2 mb-4">
-                    <span className={`text-3xl font-bold ${isOutOfStock ? 'text-slate-400' : 'text-slate-900'}`}>
-                        S/ {product.price.toFixed(2)}
-                    </span>
-                    <span className="text-sm text-slate-500">/ {product.unit}</span>
-                </div>
-
-                {/* Stock indicator */}
-                <div className="mb-4">
-                    <div className="flex items-center justify-between mb-1.5">
-                        <span className={`text-xs font-medium ${isLowStock ? 'text-orange-600' : 'text-slate-500'}`}>
-                            {isOutOfStock ? 'Sin stock disponible' : `Stock: ${product.stock} ${product.unit}`}
+                {/* Price & Stock Text */}
+                <div className="flex items-end justify-between mb-4">
+                    <div className="flex items-baseline gap-1">
+                        <span className={`text-xl font-bold ${isOutOfStock ? 'text-slate-400' : 'text-slate-900'}`}>
+                            S/ {product.price.toFixed(2)}
                         </span>
+                        <span className="text-xs text-slate-500 font-medium">/ {product.unit}</span>
                     </div>
-                    <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                        <div
-                            className={`h-full rounded-full transition-all duration-500 ${isOutOfStock ? 'bg-slate-300 w-0' :
-                                    isLowStock ? 'bg-orange-500' : 'bg-gradient-primary'
-                                }`}
-                            style={{ width: `${isOutOfStock ? 0 : Math.max(5, stockPercentage)}%` }}
-                        />
-                    </div>
+
+                    {!isOutOfStock && (
+                        <span className={`text-[10px] font-medium ${isLowStock ? 'text-orange-600' : 'text-slate-400'}`}>
+                            {isLowStock ? `Quedan ${product.stock}` : 'Disponible'}
+                        </span>
+                    )}
                 </div>
 
-                {/* Quantity controls (Always visible) */}
-                <div className="flex items-center justify-between bg-white rounded-xl p-1 border border-slate-200 shadow-sm">
+                {/* Quantity controls - Compact */}
+                <div className="flex items-center justify-between bg-slate-50 rounded-lg p-1 border border-slate-200">
                     <button
                         onClick={() => inCart && onUpdateQuantity(product.id, -1)}
                         disabled={!inCart || isOutOfStock}
-                        className={`w-10 h-10 flex items-center justify-center rounded-lg transition-all active:scale-95 ${!inCart || isOutOfStock
-                                ? 'text-slate-300 cursor-not-allowed bg-slate-50'
-                                : 'text-slate-600 hover:text-red-600 hover:bg-red-50 hover:shadow-sm'
+                        className={`w-8 h-8 flex items-center justify-center rounded-md transition-all active:scale-95 ${!inCart || isOutOfStock
+                            ? 'text-slate-300 cursor-not-allowed'
+                            : 'bg-white text-slate-600 shadow-sm hover:text-red-600'
                             }`}
                     >
-                        <Minus className="w-5 h-5" />
+                        <Minus className="w-4 h-4" />
                     </button>
 
-                    <div className="flex flex-col items-center px-2 min-w-[3rem]">
-                        <span className={`font-bold text-lg ${inCart ? 'text-slate-900' : 'text-slate-400'}`}>
+                    <div className="flex flex-col items-center px-2 min-w-[2rem]">
+                        <span className={`font-bold text-sm ${inCart ? 'text-slate-900' : 'text-slate-400'}`}>
                             {inCart ? inCart.quantity : 0}
                         </span>
-                        <span className="text-[10px] text-slate-500 uppercase font-medium">{product.unit}</span>
                     </div>
 
                     <button
@@ -156,12 +136,12 @@ export const ProductCard = ({ product, inCart, onAdd, onUpdateQuantity, index }:
                             }
                         }}
                         disabled={isOutOfStock || (inCart && inCart.quantity >= product.stock)}
-                        className={`w-10 h-10 flex items-center justify-center rounded-lg transition-all active:scale-95 ${isOutOfStock || (inCart && inCart.quantity >= product.stock)
-                                ? 'text-slate-300 cursor-not-allowed bg-slate-50'
-                                : 'bg-gradient-primary text-white hover:shadow-colored shadow-sm'
+                        className={`w-8 h-8 flex items-center justify-center rounded-md transition-all active:scale-95 ${isOutOfStock || (inCart && inCart.quantity >= product.stock)
+                            ? 'text-slate-300 cursor-not-allowed'
+                            : 'gradient-primary text-white shadow-sm hover:shadow-md'
                             }`}
                     >
-                        <Plus className="w-5 h-5" />
+                        <Plus className="w-4 h-4" />
                     </button>
                 </div>
             </div>

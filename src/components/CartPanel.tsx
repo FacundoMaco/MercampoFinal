@@ -127,7 +127,7 @@ export const CartPanel = ({
                                                                 className="w-full h-full object-cover"
                                                             />
                                                         ) : (
-                                                            <ImagePlaceholder category={item.category} className="text-xs" />
+                                                            <ImagePlaceholder category={item.category} productName={item.name} className="text-xs" />
                                                         )}
                                                     </div>
 
@@ -147,7 +147,7 @@ export const CartPanel = ({
                                                             <div className="flex items-center gap-1 bg-slate-50 rounded-lg p-1 border border-slate-200">
                                                                 <button
                                                                     onClick={() => onUpdateQuantity(item.id, -1)}
-                                                                    className="w-7 h-7 flex items-center justify-center hover:bg-white rounded-md transition-all shadow-sm disabled:opacity-50"
+                                                                    className="w-7 h-7 flex items-center justify-center bg-white rounded-md transition-all shadow-sm disabled:opacity-50 hover:bg-slate-50"
                                                                 >
                                                                     <Minus className="w-3.5 h-3.5 text-slate-600" />
                                                                 </button>
@@ -161,7 +161,7 @@ export const CartPanel = ({
                                                                         }
                                                                     }}
                                                                     disabled={item.quantity >= item.stock}
-                                                                    className={`w-7 h-7 flex items-center justify-center hover:bg-white rounded-md transition-all shadow-sm ${item.quantity >= item.stock ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                                                    className={`w-7 h-7 flex items-center justify-center bg-white rounded-md transition-all shadow-sm hover:bg-slate-50 ${item.quantity >= item.stock ? 'opacity-50 cursor-not-allowed' : ''}`}
                                                                 >
                                                                     <Plus className="w-3.5 h-3.5 text-slate-600" />
                                                                 </button>
@@ -221,13 +221,12 @@ export const CartPanel = ({
                                 </label>
 
                                 {/* Submit Button */}
-                                {/* Submit Button */}
                                 <button
                                     onClick={onSubmit}
                                     disabled={!termsAccepted || isSubmitting}
                                     className={`w-full py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3 relative overflow-hidden group/submit ${!termsAccepted || isSubmitting
-                                            ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
-                                            : 'bg-gradient-primary text-white hover:shadow-colored hover:scale-[1.02] active:scale-[0.98]'
+                                        ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+                                        : 'gradient-primary text-white hover:shadow-colored hover:scale-[1.02] active:scale-[0.98]'
                                         }`}
                                 >
                                     {isSubmitting ? (

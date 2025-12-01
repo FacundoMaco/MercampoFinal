@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Check, ShoppingBag } from 'lucide-react';
+import { Check, ShoppingBag, X } from 'lucide-react';
 import { useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { scaleIn } from '../utils/animations';
@@ -55,6 +55,14 @@ export const SuccessModal = ({ orderId, onClose }: SuccessModalProps) => {
             >
                 {/* Decorative background */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-32 gradient-primary opacity-10 blur-3xl" />
+
+                {/* Close Button X */}
+                <button
+                    onClick={onClose}
+                    className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 hover:bg-slate-100 rounded-full transition-colors z-20"
+                >
+                    <X className="w-5 h-5" />
+                </button>
 
                 <div className="relative z-10">
                     {/* Success icon */}
