@@ -24,14 +24,30 @@ function App() {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [clientName, setClientName] = useState<string | null>(() => localStorage.getItem('mercampo_client_name'));
 
-  const categories = useMemo(() => Array.from(new Set(products.map(p => p.category))), []);
+  // Helper to normalize category strings for comparison
+  const normalizeCategory = (cat: string) => {
+    return cat.toLowerCase().trim().replace(/\s+/g, ' ');
+  };
+
+  const categories = useMemo(() => {
+    const uniqueCategories = new Set(products.map(p => p.category.trim()));
+    return Array.from(uniqueCategories);
+  }, []);
 
   const filteredProducts = useMemo(() => {
     return products.filter(p => {
       const matchesSearch = p.name.toLowerCase().includes(search.toLowerCase()) ||
         p.id.toLowerCase().includes(search.toLowerCase());
-      const matchesCategory = selectedCategory ? p.category === selectedCategory : true;
-      return matchesSearch && matchesCategory;
+
+      if (selectedCategory) {
+        const productCat = normalizeCategory(p.category);
+        const selectedCat = normalizeCategory(selectedCategory);
+        if (productCat !== selectedCat) {
+          return false;
+        }
+      }
+
+      return matchesSearch;
     });
   }, [search, selectedCategory]);
 
