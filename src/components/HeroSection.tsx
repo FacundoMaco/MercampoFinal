@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Package, Layers, TrendingUp, ArrowRight } from 'lucide-react';
+import { Package, Layers, TrendingUp } from 'lucide-react';
 import { fadeInUp, staggerContainer } from '../utils/animations';
 
 interface HeroSectionProps {
@@ -27,9 +27,7 @@ export const HeroSection = ({ totalProducts, totalCategories }: HeroSectionProps
                     <p className="text-emerald-50 text-lg leading-relaxed mb-6">
                         Gestione sus pedidos mayoristas de manera eficiente. Acceda a nuestro catálogo completo de productos frescos y realice sus solicitudes en segundos.
                     </p>
-                    <button className="px-6 py-3 bg-white text-emerald-700 rounded-xl font-semibold hover:bg-emerald-50 transition-colors flex items-center gap-2 shadow-sm">
-                        Ver Catálogo <ArrowRight className="w-4 h-4" />
-                    </button>
+
                 </motion.div>
 
                 <motion.div

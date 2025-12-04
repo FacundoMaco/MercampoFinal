@@ -1,0 +1,12 @@
+Columna,Nombre del Campo,Tipo de Dato,Función de Calidad (Poka-Yoke)
+A,ID Pedido,Autonumérico,Trazabilidad única (ej. PED-2025-001).
+B,Fecha/Hora,Timestamp,Control de tiempos de entrega y KPI de puntualidad.
+C,ClienteID,Correo electrónico,Evita errores de homonimia entre restaurantes.
+D,ProductoID,Texto (SKU),"Clave: El operario lee ""VER-005"" y sabe exactamente qué es, sin confundir ""Papa Amarilla"" con ""Papa Amarilla Tumbay""."
+E,ProductoNombre,Texto,Descripción clara del ítem seleccionado.
+F,Presentación,Lista Desplegable,"Define el formato (ej. ""A granel"", ""Pelado"", ""Bandeja"")."
+G,Cantidad,Número (Decimal),"Solo permite números. Bloquea texto como ""un poco""."
+H,Unidad,Lista Desplegable,"Estandarización: Kg, Und, Atado, Bandeja, Litro."
+I,Observaciones,Texto Libre,"Solo para especificaciones de madurez o tamaño (ej. ""Que estén verdes""). "
+J,Estado,Lista,Control de flujo: Pendiente -> En Preparación -> Confirmado.
+K,Ajustes,Lista Desplegable,"Campo editable unicamente por el operario encargado cuando: se detectan valores atípicos o combinaciones inusuales pedido  o requerimientos especiales se marca como “sujeto a revisión” o si hay incongruencia (producto no disponible, tamaño diferente) se coloca ""revisar disponibilidad"""

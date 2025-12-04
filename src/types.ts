@@ -4,21 +4,11 @@ export interface Product {
     category: string;
     price: number;
     unit: string;
+    presentation: string;
     image: string;
     stock: number;
 }
 
 export interface OrderItem extends Product {
     quantity: number;
-}
-
-export interface Order {
-    id: string;
-    items: OrderItem[];
-    customer: {
-        id: string;
-        name: string;
-    };
-    status: 'pending' | 'confirmed';
-    timestamp: string;
 }

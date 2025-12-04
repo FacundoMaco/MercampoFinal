@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShoppingCart, Plus, Minus, ArrowRight } from 'lucide-react';
 import type { OrderItem } from '../types';
@@ -11,7 +12,7 @@ interface CartPanelProps {
     cart: OrderItem[];
     onUpdateQuantity: (id: string, delta: number) => void;
     onRemove: (id: string) => void;
-    onSubmit: () => void;
+    onSubmit: (observations: string) => void;
     termsAccepted: boolean;
     onTermsChange: (accepted: boolean) => void;
     isSubmitting: boolean;
@@ -28,6 +29,7 @@ export const CartPanel = ({
     onTermsChange,
     isSubmitting
 }: CartPanelProps) => {
+    const [observations, setObservations] = useState('');
     const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
     const totalPrice = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
@@ -140,6 +142,11 @@ export const CartPanel = ({
                                                             <p className="text-xs text-slate-500">
                                                                 S/ {item.price.toFixed(2)} / {item.unit}
                                                             </p>
+                                                            {item.presentation && (
+                                                                <p className="text-xs text-slate-400 mt-0.5">
+                                                                    {item.presentation}
+                                                                </p>
+                                                            )}
                                                         </div>
 
                                                         <div className="flex items-center justify-between mt-2">
@@ -207,6 +214,20 @@ export const CartPanel = ({
                                     </div>
                                 </div>
 
+                                {/* Observations */}
+                                <div className="mb-4">
+                                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                                        Observaciones
+                                    </label>
+                                    <textarea
+                                        value={observations}
+                                        onChange={(e) => setObservations(e.target.value)}
+                                        placeholder="Instrucciones especiales para su pedido..."
+                                        className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all resize-none text-sm"
+                                        rows={2}
+                                    />
+                                </div>
+
                                 {/* Terms */}
                                 <label className="flex items-start gap-3 cursor-pointer group p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-200">
                                     <input
@@ -222,7 +243,7 @@ export const CartPanel = ({
 
                                 {/* Submit Button */}
                                 <button
-                                    onClick={onSubmit}
+                                    onClick={() => onSubmit(observations)}
                                     disabled={!termsAccepted || isSubmitting}
                                     className={`w-full py-4 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-3 relative overflow-hidden group/submit ${!termsAccepted || isSubmitting
                                         ? 'bg-slate-100 text-slate-400 cursor-not-allowed'

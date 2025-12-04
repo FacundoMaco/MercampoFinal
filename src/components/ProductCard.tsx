@@ -92,18 +92,25 @@ export const ProductCard = ({ product, inCart, onAdd, onUpdateQuantity, index }:
                 </div>
 
                 {/* Price & Stock Text */}
-                <div className="flex items-end justify-between mb-4">
-                    <div className="flex items-baseline gap-1">
-                        <span className={`text-xl font-bold ${isOutOfStock ? 'text-slate-400' : 'text-slate-900'}`}>
-                            S/ {product.price.toFixed(2)}
-                        </span>
-                        <span className="text-xs text-slate-500 font-medium">/ {product.unit}</span>
-                    </div>
+                <div className="flex flex-col mb-4">
+                    <div className="flex items-end justify-between">
+                        <div className="flex items-baseline gap-1">
+                            <span className={`text-xl font-bold ${isOutOfStock ? 'text-slate-400' : 'text-slate-900'}`}>
+                                S/ {product.price.toFixed(2)}
+                            </span>
+                            <span className="text-xs text-slate-500 font-medium">/ {product.unit}</span>
+                        </div>
 
-                    {!isOutOfStock && (
-                        <span className={`text-[10px] font-medium ${isLowStock ? 'text-orange-600' : 'text-slate-400'}`}>
-                            {isLowStock ? `Quedan ${product.stock}` : 'Disponible'}
-                        </span>
+                        {!isOutOfStock && (
+                            <span className={`text-[10px] font-medium ${isLowStock ? 'text-orange-600' : 'text-slate-400'}`}>
+                                {isLowStock ? `Quedan ${product.stock}` : 'Disponible'}
+                            </span>
+                        )}
+                    </div>
+                    {product.presentation && (
+                        <p className="text-xs text-slate-500 mt-1">
+                            Presentación: {product.presentation}
+                        </p>
                     )}
                 </div>
 

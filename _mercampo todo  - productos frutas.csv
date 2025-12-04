@@ -1,0 +1,78 @@
+ProductoID,ProductoNombre,Presentación,Unidad
+FRU-001,Aguaymanto,Entero,Kg
+FRU-002,Aguaymanto pelado,Entero Pelado,Kg
+FRU-003,Aji charapita,Entero,Kg
+FRU-004,Arandanos,Clamshell (Caja plástica),250gr
+FRU-005,Camu camu,Entero,Kg
+FRU-006,Carambola,Entero,Kg
+FRU-007,Carambola verde,Entero,Kg
+FRU-008,Chirimoya,Entero,Kg
+FRU-009,Ciruela,Entero,Kg
+FRU-010,Ciruela roja,Entero,Kg
+FRU-011,Cocona,Entero,Kg
+FRU-012,Durazno,Entero,Kg
+FRU-013,Frambuesa,Clamshell (Caja plástica),250gr
+FRU-014,Fresa,Entero,Kg
+FRU-015,Granada,Entero,Und
+FRU-016,Granadilla,Entero,Kg
+FRU-017,Guanabana,Entero,Kg
+FRU-018,Higo,Entero,Kg
+FRU-019,Hojas bijao,Hojas,Paquete (7 Hojas)
+FRU-020,Hojas de higo,Hojas,Paquete (250g)
+FRU-021,Kiwi,Entero,Kg
+FRU-022,Lima,Entero,Kg
+FRU-023,Lima verde,Entero,Kg
+FRU-024,Lucuma,Entero,Kg
+FRU-025,Mandarina,Entero,Kg
+FRU-026,Mandarina sin pepa,Entero,Kg
+FRU-027,Mango edward,Entero,Kg
+FRU-028,Mango papaya,Entero,Kg
+FRU-029,Manzana caña,Entero,Kg
+FRU-030,Manzana chile roja,Entero,Kg
+FRU-031,Manzana chile verde,Entero,Kg
+FRU-032,Manzana criolla,Entero,Kg
+FRU-033,Manzana de jugo,Entero,Kg
+FRU-034,Manzana delicia,Entero,Kg
+FRU-035,Manzana fuji,Entero,Kg
+FRU-036,Manzana israel,Entero,Kg
+FRU-037,Manzana royal,Entero,Kg
+FRU-038,Melocoton,Entero,Kg
+FRU-039,Melon,Entero,Kg
+FRU-040,Membrillo,Entero,Kg
+FRU-041,Naranja,Entero,Kg
+FRU-042,Naranja huando,Entero,Kg
+FRU-043,Naranja mesa,Entero,Kg
+FRU-044,Naranja tangelo,Entero,Kg
+FRU-045,Palta ensalada,Entero,Kg
+FRU-046,Palta fuerte,Entero,Kg
+FRU-047,Palta fuerte pinto,Entero,Kg
+FRU-048,Palta sazona,Entero,Kg
+FRU-049,Papaya,Entero,Und
+FRU-050,Pepino fruta,Entero,Kg
+FRU-051,Pera verde,Entero,Kg
+FRU-052,Piña golden,Entero,Und
+FRU-053,Piña verde,Entero,Und
+FRU-054,Piña hawaiana,Entero,Und
+FRU-055,Pitahaya,Entero,Kg
+FRU-056,Platano bellaco,Entero,Und
+FRU-057,Platano bellaco pinto,Entero,Und
+FRU-058,Platano bellaco verde,Entero,Und
+FRU-059,Platano bizcocho,Entero,Kg
+FRU-060,Platano isla,Entero,Und
+FRU-061,Platano manzano,Entero,Und
+FRU-062,Platano palillo,Entero,Und
+FRU-063,Platano seda,Entero,Und
+FRU-064,Sacha culantro,Atado Estándar,Atado (250g)
+FRU-065,Sandia,Entero,Und
+FRU-066,Sanky,Entero,Kg
+FRU-067,Tamarindo pulpa,Paquete,250gr
+FRU-068,Toronja rosada,Entero,Und
+FRU-069,Tumbo,Entero,Kg
+FRU-070,Tuna,Entero,Kg
+FRU-071,Tuna verde,Entero,Kg
+FRU-072,Uva borgoña,Bolsa de alimentos,500gr
+FRU-073,Uva italia,Bolsa de alimentos,500gr
+FRU-074,Uva morada,Bolsa de alimentos,500gr
+FRU-075,Uva red globe,Bolsa de alimentos,500gr
+FRU-076,Uva verde,Bolsa de alimentos,500gr
+FRU-077,Zarzamora,Clamshell (Caja plástica),250gr

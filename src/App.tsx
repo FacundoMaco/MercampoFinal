@@ -64,7 +64,7 @@ function App() {
 
   const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (observations: string) => {
     if (!termsAccepted) return;
     setIsSubmitting(true);
 
@@ -78,10 +78,10 @@ function App() {
       "ClienteID": customerId,
       "ProductoID": item.id,
       "ProductoNombre": item.name,
-      "Presentación": item.unit,
+      "Presentación": item.presentation,
       "Cantidad": item.quantity,
       "Unidad": item.unit,
-      "Observaciones": "",
+      "Observaciones": observations,
       "Estado": "Pendiente"
     }));
 
@@ -199,10 +199,10 @@ function App() {
             <button
               onClick={() => setSelectedCategory(null)}
               className={cn(
-                "px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all shadow-sm",
+                "px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all shadow-sm border",
                 selectedCategory === null
-                  ? "bg-slate-900 text-white shadow-lg scale-105"
-                  : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
+                  ? "bg-slate-900 text-white border-slate-900 shadow-lg scale-105"
+                  : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900"
               )}
             >
               Todos
@@ -212,67 +212,70 @@ function App() {
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={cn(
-                  "px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all shadow-sm",
+                  "px-5 py-2.5 rounded-xl text-sm font-semibold whitespace-nowrap transition-all shadow-sm border",
                   selectedCategory === cat
-                    ? "bg-gradient-primary text-white shadow-colored scale-105"
-                    : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
+                    ? "bg-emerald-600 text-white border-emerald-600 shadow-md scale-105"
+                    : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:border-emerald-200 hover:text-emerald-700"
                 )}
               >
                 {cat}
               </button>
             ))}
           </div>
-        </motion.div>
+        </motion.div >
 
         {/* Products Grid */}
-        {filteredProducts.length > 0 ? (
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            animate="animate"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-          >
-            {filteredProducts.map((product, index) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                inCart={cart.find(i => i.id === product.id)}
-                onAdd={addToCart}
-                onUpdateQuantity={updateQuantity}
-                index={index}
-              />
-            ))}
-          </motion.div>
-        ) : (
-          <motion.div
-            variants={fadeInUp}
-            initial="initial"
-            animate="animate"
-            className="flex flex-col items-center justify-center py-20 text-center"
-          >
-            <NoResultsIllustration />
-            <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-2">
-              No encontramos resultados
-            </h3>
-            <p className="text-slate-500 max-w-md">
-              Intenta con otros términos de búsqueda o explora nuestras categorías
-            </p>
-            {search && (
-              <button
-                onClick={() => setSearch('')}
-                className="mt-6 px-6 py-3 bg-gradient-primary text-white rounded-xl font-semibold hover:shadow-colored transition-all"
-              >
-                Limpiar búsqueda
-              </button>
-            )}
-          </motion.div>
-        )}
-      </main>
+        {
+          filteredProducts.length > 0 ? (
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            >
+              {filteredProducts.map((product, index) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  inCart={cart.find(i => i.id === product.id)}
+                  onAdd={addToCart}
+                  onUpdateQuantity={updateQuantity}
+                  index={index}
+                />
+              ))}
+            </motion.div>
+          ) : (
+            <motion.div
+              variants={fadeInUp}
+              initial="initial"
+              animate="animate"
+              className="flex flex-col items-center justify-center py-20 text-center"
+            >
+              <NoResultsIllustration />
+              <h3 className="text-xl font-semibold text-slate-900 mt-6 mb-2">
+                No encontramos resultados
+              </h3>
+              <p className="text-slate-500 max-w-md">
+                Intenta con otros términos de búsqueda o explora nuestras categorías
+              </p>
+              {search && (
+                <button
+                  onClick={() => setSearch('')}
+                  className="mt-6 px-6 py-3 bg-gradient-primary text-white rounded-xl font-semibold hover:shadow-colored transition-all"
+                >
+                  Limpiar búsqueda
+                </button>
+              )}
+            </motion.div>
+          )
+        }
+      </main >
 
       {/* Cart Panel */}
-      <CartPanel
+      < CartPanel
         isOpen={isCartOpen}
-        onClose={() => setIsCartOpen(false)}
+        onClose={() => setIsCartOpen(false)
+        }
         cart={cart}
         onUpdateQuantity={updateQuantity}
         onRemove={removeFromCart}
@@ -284,32 +287,36 @@ function App() {
 
       {/* Success Modal */}
       <AnimatePresence>
-        {orderSuccess && (
-          <SuccessModal
-            orderId={orderSuccess}
-            onClose={() => setOrderSuccess(null)}
-          />
-        )}
-      </AnimatePresence>
+        {
+          orderSuccess && (
+            <SuccessModal
+              orderId={orderSuccess}
+              onClose={() => setOrderSuccess(null)}
+            />
+          )
+        }
+      </AnimatePresence >
 
       {/* Floating Action Button (Mobile) */}
-      {totalItems > 0 && !isCartOpen && (
-        <motion.button
-          initial={{ scale: 0, y: 100 }}
-          animate={{ scale: 1, y: 0 }}
-          exit={{ scale: 0, y: 100 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => setIsCartOpen(true)}
-          className="fixed bottom-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-xl text-emerald-700 rounded-full shadow-colored-lg flex items-center justify-center z-40 lg:hidden border border-emerald-500/20"
-        >
-          <ShoppingCart className="w-7 h-7" />
-          <span className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-accent text-white text-sm font-bold rounded-full flex items-center justify-center shadow-lg ring-2 ring-white">
-            {totalItems}
-          </span>
-        </motion.button>
-      )}
-    </div>
+      {
+        totalItems > 0 && !isCartOpen && (
+          <motion.button
+            initial={{ scale: 0, y: 100 }}
+            animate={{ scale: 1, y: 0 }}
+            exit={{ scale: 0, y: 100 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setIsCartOpen(true)}
+            className="fixed bottom-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-xl text-emerald-700 rounded-full shadow-colored-lg flex items-center justify-center z-40 lg:hidden border border-emerald-500/20"
+          >
+            <ShoppingCart className="w-7 h-7" />
+            <span className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-accent text-white text-sm font-bold rounded-full flex items-center justify-center shadow-lg ring-2 ring-white">
+              {totalItems}
+            </span>
+          </motion.button>
+        )
+      }
+    </div >
   );
 }
 
