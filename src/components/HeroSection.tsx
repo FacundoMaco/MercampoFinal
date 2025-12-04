@@ -36,33 +36,33 @@ export const HeroSection = ({ totalProducts, totalCategories }: HeroSectionProps
                     variants={fadeInUp}
                     className="grid grid-cols-1 sm:grid-cols-3 gap-4"
                 >
-                    <div className="glass rounded-2xl p-4 flex items-center gap-4 border border-white/10">
-                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                            <Package className="w-6 h-6 text-white" />
+                    <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-4 flex items-center gap-4 border border-white/20 shadow-sm">
+                        <div className="w-12 h-12 bg-emerald-100/50 rounded-xl flex items-center justify-center">
+                            <Package className="w-6 h-6 text-emerald-700" />
                         </div>
                         <div>
-                            <p className="text-2xl font-bold text-white tabular-nums">{totalProducts}</p>
-                            <p className="text-emerald-50 text-sm font-medium">Productos Disponibles</p>
+                            <p className="text-2xl font-bold text-slate-900 tabular-nums">{totalProducts}</p>
+                            <p className="text-emerald-800 text-sm font-medium">Productos Disponibles</p>
                         </div>
                     </div>
 
-                    <div className="glass rounded-2xl p-4 flex items-center gap-4 border border-white/10">
-                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                            <Layers className="w-6 h-6 text-white" />
+                    <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-4 flex items-center gap-4 border border-white/20 shadow-sm">
+                        <div className="w-12 h-12 bg-emerald-100/50 rounded-xl flex items-center justify-center">
+                            <Layers className="w-6 h-6 text-emerald-700" />
                         </div>
                         <div>
-                            <p className="text-2xl font-bold text-white tabular-nums">{totalCategories}</p>
-                            <p className="text-emerald-50 text-sm font-medium">Categorías Activas</p>
+                            <p className="text-2xl font-bold text-slate-900 tabular-nums">{totalCategories}</p>
+                            <p className="text-emerald-800 text-sm font-medium">Categorías Activas</p>
                         </div>
                     </div>
 
-                    <div className="glass rounded-2xl p-4 flex items-center gap-4 border border-white/10">
-                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
-                            <TrendingUp className="w-6 h-6 text-white" />
+                    <div className="bg-white/90 backdrop-blur-xl rounded-2xl p-4 flex items-center gap-4 border border-white/20 shadow-sm">
+                        <div className="w-12 h-12 bg-emerald-100/50 rounded-xl flex items-center justify-center">
+                            <TrendingUp className="w-6 h-6 text-emerald-700" />
                         </div>
                         <div>
-                            <p className="text-2xl font-bold text-white">100%</p>
-                            <p className="text-emerald-50 text-sm font-medium">Calidad Garantizada</p>
+                            <p className="text-2xl font-bold text-slate-900">100%</p>
+                            <p className="text-emerald-800 text-sm font-medium">Calidad Garantizada</p>
                         </div>
                     </div>
                 </motion.div>

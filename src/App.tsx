@@ -120,10 +120,12 @@ function App() {
               className="flex items-center gap-3"
             >
               <div className="relative">
-                <div className="absolute inset-0 bg-emerald-500/20 rounded-2xl blur-lg" />
-                <div className="relative w-12 h-12 bg-gradient-primary rounded-2xl flex items-center justify-center shadow-colored">
-                  <span className="text-white font-bold text-xl">M</span>
-                </div>
+                <div className="absolute inset-0 bg-emerald-500/20 rounded-full blur-lg" />
+                <img
+                  src="/logo.png"
+                  alt="Mercampo Logo"
+                  className="relative w-12 h-12 rounded-full shadow-colored object-cover bg-white"
+                />
               </div>
               <div>
                 <h1 className="text-xl font-bold text-slate-900">Mercampo</h1>
@@ -138,9 +140,9 @@ function App() {
               onClick={() => setIsCartOpen(true)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="relative p-3 bg-gradient-to-br from-emerald-50 to-teal-50 hover:from-emerald-100 hover:to-teal-100 rounded-2xl transition-all shadow-sm hover:shadow-md border border-emerald-200"
+              className="relative p-3 bg-white/90 backdrop-blur-xl hover:bg-white rounded-2xl transition-all shadow-sm hover:shadow-md border border-emerald-500/20 group"
             >
-              <ShoppingCart className="w-6 h-6 text-emerald-700" />
+              <ShoppingCart className="w-6 h-6 text-emerald-700 group-hover:scale-110 transition-transform" />
               {totalItems > 0 && (
                 <motion.span
                   initial={{ scale: 0 }}
@@ -299,7 +301,7 @@ function App() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsCartOpen(true)}
-          className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-primary text-white rounded-full shadow-colored-lg flex items-center justify-center z-40 lg:hidden"
+          className="fixed bottom-6 right-6 w-16 h-16 bg-white/90 backdrop-blur-xl text-emerald-700 rounded-full shadow-colored-lg flex items-center justify-center z-40 lg:hidden border border-emerald-500/20"
         >
           <ShoppingCart className="w-7 h-7" />
           <span className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-accent text-white text-sm font-bold rounded-full flex items-center justify-center shadow-lg ring-2 ring-white">
