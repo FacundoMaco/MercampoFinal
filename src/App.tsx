@@ -9,6 +9,7 @@ import { HeroSection } from './components/HeroSection';
 import { ProductCard } from './components/ProductCard';
 import { CartPanel } from './components/CartPanel';
 import { SuccessModal } from './components/SuccessModal';
+import { LoginModal } from './components/LoginModal';
 import { NoResultsIllustration } from './assets/illustrations';
 
 const GOOGLE_SHEETS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbxfSzvKSgNdYR83tjfbhtNuLRQ-p2-pMDBTJ-7anVD6OT0QnGL6kIlQwu34qN8k23rr/exec';
@@ -21,6 +22,7 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState<string | null>(null);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [clientName, setClientName] = useState<string | null>(() => localStorage.getItem('mercampo_client_name'));
 
   const categories = useMemo(() => Array.from(new Set(products.map(p => p.category))), []);
 
@@ -70,7 +72,7 @@ function App() {
 
     const orderId = `ORD-${Date.now().toString().slice(-6)}`;
     const timestamp = new Date().toISOString();
-    const customerId = "defaultClient";
+    const customerId = clientName || "Cliente Anónimo";
 
     const payload = cart.map(item => ({
       "ID Pedido": orderId,
@@ -109,6 +111,12 @@ function App() {
 
   return (
     <div className="min-h-screen gradient-mesh">
+      {!clientName && (
+        <LoginModal onLogin={(name) => {
+          setClientName(name);
+          localStorage.setItem('mercampo_client_name', name);
+        }} />
+      )}
       {/* Enhanced Header */}
       <header className="sticky top-0 z-40 glass border-b border-slate-200/50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
